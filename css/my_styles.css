@@ -1,0 +1,98 @@
+/* Header Text! */
+.navbar {
+    background-color: #004080; /* Dark blue background */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: static;
+}
+
+/* Unordered list styling */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    position: static;
+}
+
+/* Individual link styling */
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    position: static;
+}
+
+.nav-links li a:hover {
+    color: #ffcc00; /* Yellow on hover */
+}
+
+.my_serif_text {
+    font-family: serif;
+    position: static;
+}
+
+.my_special_color {
+    color: rgb(56, 56, 135) !important;
+}
+
+.caption { 
+    list-style-type: none;
+    margin: 0;
+    padding: 14px 16px;
+    overflow: hidden;
+    background-color: gray;
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    position: static;
+  }
+
+  .text {
+    text-align: left;
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-style: italic;
+    position: static;
+}
+
+/* For each resume section title */
+.resumetitle {
+    font-size: 25px;
+    list-style-position: outside;
+    list-style-type: upper-roman;
+    position: static;
+}
+
+.links {
+    color: blue;
+    text-decoration: underline;
+    position: static;
+}
+
+.underline {
+    text-decoration: underline;
+    color: white;
+    font-size: 25px;
+    position: static;
+}
+
+.regular_text {
+    color: whitesmoke;
+    font-size: 25px;
+    list-style-position: outside;
+    list-style-type: upper-roman;
+    position: static;
+}
+
+.list_items {
+    list-style-type: disc;
+    color:rgb(217, 210, 210);
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    position: static;
+}

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Chat Prep</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Styles (Optional - Tailwind handles most) */
+        body {
+            font-family: 'Inter', sans-serif; /* Tailwind default sans-serif is good */
+        }
+        /* Style datalist dropdown arrow */
+         input::-webkit-calendar-picker-indicator {
+            /* filter: invert(0.8); */ /* Make arrow lighter on dark background */
+         }
+        /* Style placeholder text color */
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+          color: #a0aec0; /* gray-500 */
+          opacity: 1; /* Firefox */
+        }
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+          color: #a0aec0;
+        }
+        ::-ms-input-placeholder { /* Microsoft Edge */
+          color: #a0aec0;
+        }
+        /* Ensure dark mode for selects */
+        select {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%239ca3af' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 0.5rem center;
+            background-repeat: no-repeat;
+            background-size: 1.5em 1.5em;
+            padding-right: 2.5rem;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        /* Style for the default disabled option in select */
+        select:invalid { color: #a0aec0; } /* gray-500 */
+        option:not(:checked) { color: white; } /* Ensure dropdown options are visible */
+
+    </style>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-gray-200 min-h-screen flex items-center justify-center p-4">
+
+    <div class="bg-gray-800 p-8 rounded-lg shadow-2xl w-full max-w-xl border border-gray-700">
+        <h1 class="text-3xl font-bold text-center mb-4 text-white tracking-tight flex items-center justify-center">
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 mr-2 text-amber-600">
+                 <path d="M1.5 8.67v8.58a3 3 0 003 3h8.a3 3 0 003-3V8.67h1.5a3 3 0 003-3V3a3 3 0 00-3-3h-15a3 3 0 00-3 3v2.67a3 3 0 003 3H1.5zM16.5 4.5h1.5a.75.75 0 01.75.75v.04a.75.75 0 01-.75.75h-1.5a.75.75 0 01-.75-.75V5.25a.75.75 0 01.75-.75z" />
+             </svg>
+             <span>Coffee Chat Prep</span>
+        </h1>
+
+        <div class="text-center mb-8">
+             <a href="../index.html" class="text-sm text-blue-400 hover:text-blue-300 hover:underline transition-colors duration-150">Home - Link to Resume</a>
+        </div>
+
+
+        <div class="space-y-6">
+            <div>
+                <input list="banks" id="investment-bank" name="investment-bank" placeholder="Investment Bank (e.g., Goldman Sachs)" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-500">
+                <datalist id="banks">
+                    <option value="Goldman Sachs">
+                    <option value="JPMorgan Chase">
+                    <option value="Morgan Stanley">
+                    <option value="Bank of America">
+                    <option value="Citigroup">
+                    <option value="Barclays">
+                    <option value="UBS">
+                    <option value="Deutsche Bank">
+                    <option value="Evercore">
+                    <option value="Lazard">
+                    <option value="Moelis & Company">
+                    <option value="Centerview Partners">
+                    <option value="PJT Partners">
+                    <option value="Jefferies">
+                    <option value="RBC Capital Markets">
+                    <option value="Wells Fargo Securities">
+                    </datalist>
+            </div>
+
+            <div>
+                <select id="position" name="position" required class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-white invalid:text-gray-500">
+                    <option value="" disabled selected hidden>Professional's Position</option> <option value="Analyst">Analyst</option>
+                    <option value="Associate">Associate</option>
+                    <option value="Vice President (VP)">Vice President (VP)</option>
+                    <option value="Director">Director</option>
+                    <option value="Managing Director (MD)">Managing Director (MD)</option>
+                </select>
+            </div>
+
+            <div>
+                <input list="groups" id="group-industry" name="group-industry" placeholder="Product Group / Industry (e.g., M&A)" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-500">
+                 <datalist id="groups">
+                    <option value="Mergers & Acquisitions (M&A)">
+                    <option value="Leveraged Finance (LevFin)">
+                    <option value="Equity Capital Markets (ECM)">
+                    <option value="Debt Capital Markets (DCM)">
+                    <option value="Restructuring">
+                    <option value="Technology, Media & Telecom (TMT)">
+                    <option value="Industrials">
+                    <option value="Consumer & Retail">
+                    <option value="Healthcare">
+                    <option value="Financial Institutions Group (FIG)">
+                    <option value="Real Estate">
+                    <option value="Energy & Power">
+                    <option value="Financial Sponsors">
+                    </datalist>
+            </div>
+
+            <div>
+                <button id="generate-button" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-md transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-blue-500 mt-4">
+                    Generate Questions!
+                </button>
+            </div>
+        </div>
+
+        <div id="questions-output" class="mt-10 pt-6 border-t border-gray-700 hidden">
+             <ul id="questions-list" class="space-y-3 list-disc list-inside text-gray-300">
+                 </ul>
+        </div>
+
+    </div>
+
+    <script>
+        // Get DOM Elements
+        const bankInput = document.getElementById('investment-bank');
+        const positionSelect = document.getElementById('position');
+        const groupInput = document.getElementById('group-industry');
+        const generateButton = document.getElementById('generate-button');
+        const questionsOutput = document.getElementById('questions-output');
+        const questionsList = document.getElementById('questions-list');
+
+        // --- Question Templates ---
+
+        // Generic questions (fallback)
+        const genericQuestions = [
+            "What has been the most surprising or unexpected aspect of your career path in investment banking so far?",
+            "Could you share what a typical day or week looks like in your current role?",
+            "What qualities or skills do you believe are most crucial for success in this field?",
+            "What aspects of the firm's culture do you appreciate the most?",
+            "How do you see the industry evolving over the next few years?",
+            "What advice would you give to someone interested in pursuing a career in investment banking today?",
+            "What resources (books, websites, courses) did you find most helpful when you were starting out?",
+            "How does your team typically collaborate on projects or deals?",
+            "What's a common misconception people have about working in investment banking?",
+            "Looking back, is there anything you would have done differently in your career preparation?"
+        ];
+
+        // Questions tailored for specific inputs
+        // Using template literals: ${bank}, ${position}, ${group}
+        const tailoredQuestions = {
+            // --- Analyst / Associate Focused ---
+            junior: [
+                "As an ${position} in the ${group} group at ${bank}, what types of projects or analyses are you most involved in day-to-day?",
+                "What was the learning curve like transitioning into your role as an ${position} at ${bank}, especially within the ${group} space?",
+                "What skills have you found most essential to develop early on as an ${position} in ${group}?",
+                "How does the ${group} team at ${bank} support the development and training of junior bankers like Analysts and Associates?",
+                "What advice would you give someone aiming to secure an Analyst/Associate role specifically within the ${group} group at ${bank}?",
+                "Could you describe the team dynamics within the ${group} group at ${bank} from an ${position}'s perspective?"
+            ],
+            // --- VP / Director / MD Focused ---
+            senior: [
+                "From your vantage point as a ${position} at ${bank}, what are the most significant trends or shifts you're currently seeing in the ${group} sector?",
+                "How has your role and focus evolved as you've progressed to ${position}, particularly in terms of client relationship management within ${group}?",
+                "Could you share some insights into the strategic priorities for the ${group} practice at ${bank} in the current market environment?",
+                "What differentiates ${bank}'s approach or platform in the ${group} space compared to key competitors?",
+                "As a leader (${position}), how do you foster collaboration and mentorship within the ${group} team at ${bank}?",
+                "What kind of strategic challenges are clients in the ${group} sector bringing to ${bank} most often these days?"
+            ],
+            // --- Group/Industry Focused (can apply to all levels) ---
+            groupFocus: [
+                "What are some of the unique challenges or opportunities specific to advising clients in the ${group} sector right now?",
+                "Are there any recent deals or market activities within ${group} that you found particularly interesting or indicative of broader trends?",
+                "What specific skills or knowledge areas are becoming increasingly important for bankers focused on the ${group} industry?",
+                "How does the ${group} team at ${bank} typically interact with other product or industry groups within the firm?",
+                "What excites you most about the future of the ${group} sector and ${bank}'s role within it?"
+            ],
+            // --- Bank Focused (can apply to all levels) ---
+            bankFocus: [
+                "What aspects of ${bank}'s culture or values resonate most with you personally?",
+                "How has ${bank} adapted its strategy or focus in response to recent market changes?",
+                "What opportunities for professional development or mobility has ${bank} provided you during your time here?",
+                "Could you speak about ${bank}'s specific strengths or reputation in the market, perhaps relating to ${group} if applicable?",
+                "What makes the team environment at ${bank} unique compared to other places you may know of?"
+            ]
+        };
+
+        // --- Helper Function: Get Random Subset ---
+        function getRandomSubset(arr, count) {
+            const shuffled = arr.sort(() => 0.5 - Math.random()); // Shuffle array
+            return shuffled.slice(0, count); // Get first 'count' elements
+        }
+
+        // --- Event Listener for Button Click ---
+        generateButton.addEventListener('click', () => {
+            // Get input values
+            const bank = bankInput.value.trim() || "the bank"; // Use generic placeholder if empty
+            const position = positionSelect.value;
+            const group = groupInput.value.trim() || "the group/industry"; // Use generic placeholder if empty
+
+            // Basic validation: Check if position is selected
+            if (!position) {
+                alert("Please select the professional's position.");
+                // Optionally focus the select element
+                positionSelect.focus();
+                return; // Stop execution if position is not selected
+            }
+
+
+            // Determine seniority level
+            const isJunior = position === 'Analyst' || position === 'Associate';
+            const isSenior = position === 'Vice President (VP)' || position === 'Director' || position === 'Managing Director (MD)';
+
+            let potentialQuestions = [];
+
+            // --- Build Pool of Potential Questions ---
+
+            // 1. Add seniority-based questions (position is guaranteed to be selected here)
+            const positionSpecific = isJunior ? tailoredQuestions.junior : (isSenior ? tailoredQuestions.senior : []);
+            potentialQuestions.push(...positionSpecific);
+
+
+            // 2. Add group-focused questions if group is specified
+            if (groupInput.value.trim()) { // Only if user actually typed something
+                 potentialQuestions.push(...tailoredQuestions.groupFocus);
+            }
+
+            // 3. Add bank-focused questions if bank is specified
+            if (bankInput.value.trim()) { // Only if user actually typed something
+                 potentialQuestions.push(...tailoredQuestions.bankFocus);
+            }
+
+            // 4. Add generic questions to ensure we have enough options
+            potentialQuestions.push(...genericQuestions);
+
+            // --- Filter and Format Questions ---
+            let formattedQuestions = potentialQuestions.map(q => {
+                // Replace placeholders with actual values (or defaults)
+                return q.replace(/\$\{bank\}/g, bank)
+                        .replace(/\$\{position\}/g, position) // Position is guaranteed
+                        .replace(/\$\{group\}/g, group);
+            });
+
+             // Remove duplicates that might arise from templates
+             formattedQuestions = [...new Set(formattedQuestions)];
+
+            // --- Select Final Questions ---
+            const finalQuestions = getRandomSubset(formattedQuestions, 3);
+
+            // --- Display Questions ---
+            questionsList.innerHTML = ''; // Clear previous questions
+            if (finalQuestions.length > 0) {
+                finalQuestions.forEach(q => {
+                    const li = document.createElement('li');
+                    li.textContent = q;
+                    questionsList.appendChild(li);
+                });
+                questionsOutput.classList.remove('hidden'); // Show the output section
+            } else {
+                 // Should not happen with generic fallback, but just in case
+                 const li = document.createElement('li');
+                 li.textContent = "Could not generate questions. Please try again.";
+                 questionsList.appendChild(li);
+                 questionsOutput.classList.remove('hidden');
+            }
+
+            // Optional: Scroll to the questions
+            questionsOutput.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+
+         // Set initial state for select placeholder styling
+         if (positionSelect.value === "") {
+            positionSelect.classList.add('invalid:text-gray-500');
+         }
+         positionSelect.addEventListener('change', () => {
+             if (positionSelect.value === "") {
+                 positionSelect.classList.add('invalid:text-gray-500');
+             } else {
+                 positionSelect.classList.remove('invalid:text-gray-500');
+             }
+         });
+
+
+    </script>
+
+</body>
+</html>
